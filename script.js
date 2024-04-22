@@ -36,6 +36,7 @@ function addUser() {
 function login() {
     var user_name = document.getElementById("username").value;
     var pass = document.getElementById("password").value;
+    ar users = JSON.parse(localStorage.getItem('users')) || [];
     for (var i = 0; i < users.length; i++) {
         var userInfo = users[i];
         if (userInfo.username === user_name && userInfo.email === email && userInfo.password === pass) {
